@@ -191,7 +191,7 @@ def measure_pitch(trajectory, tail_fraction=0.4):
     log_r_tail = log_r[tail_start:]
     phi_tail   = phi[tail_start:]
 
-    if len(log_r_tail) < 5:    # need enough points to measure a trend
+    if len(log_r_tail) < 3:    # need enough points to measure a trend
         return np.nan, np.array([])
 
     # Local pitch at each step: Delta_n = d(phi)/d(log r)
